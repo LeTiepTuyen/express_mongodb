@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Perimeter Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rectangle Perimeter Calculator</h1>
+        <form action="/rectangle/calculate" method="POST">
+            <label for="length">Length:</label>
+            <input type="number" name="length" id="length" required>
+            <label for="width">Width:</label>
+            <input type="number" name="width" id="width" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <% if (perimeter !== null) { %>
+            <h2>Perimeter: <%= perimeter %></h2>
+        <% } %>
+    </div>
+</body>
+</html>
